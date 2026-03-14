@@ -1,3 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Breeds World</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right), #ffd6e7 #d6f5ff;
+        }
+
+        /* Header */
+        header {
+            background: #ff8fb1;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            border-bottom: 5px solid #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        /* Container*/
+        .container {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 25px;
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card h2 {
+            color: #ff8fb1;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Paw decoration */
+        .card::after {
+            content: "🐾";
+            position: absolute;
+            font-size: 30px;
+            bottom: 10px;
+            right: 15px;
+            opacity: 0.3;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: left; }
+            50% { background-position: right; }
+        }
+
+        /* LOGIN BOX */
+        .box{
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+            position: relative;
+        }
+
+        h1{
+            margin: 20px;
+            color: #ff6fa5;
+        }
+
+        /* INPUTS */
+        input{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ffd6e7;
+            border-radius: 15px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus{
+            border-color: #ff6fa5;
+            box-shadow: 0 0 10px pink;
+        }
+
+        /* BUTTON */
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 20px;
+            background: #ff6fa5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #ff8fa5;
+            transform: scale(1.05);
+        }
+
+        p{
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* FLOATING HEARTS */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            color: #ff6fa5;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1);
+                opacity: 1;}
+            100% {transform: translateY(-800px);
+                opacity: 0;}
+        }
+
+        /* Footer */
+
+        footer {
+            margin-top: 50px;
+            background: #ff8fb1;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+</style>
+</head>
+
 <div class="box">
         <h1>Login</h1>
         <input type="text" placeholder="Username">
@@ -27,3 +193,38 @@
             },500);
     </script>
 
+<body>
+    <header>
+        <h1>Cat Breeds World</h1>
+    </header>
+
+    <div class="card">
+        <h2>Persian Cat</h2>
+        <img src="https://th.bing.com/th/id/OIP.W88CMYlSo950P8VBtiDxAQHaE9?w=280&h=187&c=7&r=0&o=7&pid=1.7&rm=3/400/250" alt="Persian Cat">
+        <p>The Persian cat is known for its long, luxurious coat and sweet personality. They are one of the most popular cat breeds in the world.</p>
+    </div>
+
+    <div class="card">
+        <h2>Siamese Cat</h2>
+        <img src="https://th.bing.com/th/id/OIP.Qtvme2iTFNb3jauGNee3aAHaFj?w=268&h=201&c=7&r=0&o=7&pid=1.7&rm=3/401/250" alt="Siamese Cat">
+        <p>The Siamese cat is famous for its striking blue eyes and sleek, short coat. They are vocal and affectionate companions.</p>
+    </div>
+
+    <div class="card">
+        <h2>Maine Coon</h2>
+        <img src="https://th.bing.com/th/id/OIP.AWADcnq--DT4kLnV0M7eLgHaE8?w=258&h=180&c=7&r=0&o=7&pid=1.7&rm=3/402/250" alt="Maine Coon">
+        <p>The Maine Coon is one of the largest domesticated cat breeds. They are known for their friendly nature and distinctive tufted ears.</p>
+    </div>
+
+
+    <div class="card">
+        <h2>Bengal Cat</h2>
+        <img src="https://th.bing.com/th/id/OIP.mcU3nUbTMI1pBHzSdO0LmwHaE6?w=297&h=197&c=7&r=0&o=7&pid=1.7&rm=3/403/250" alt="Bengal Cat">
+        <p>The Bengal cat is known for its spotted coat and energetic personality. They are intelligent and love to play.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Cat Breeds World. All rights reserved.</p>
+    </footer>
+</body>
+</html>
