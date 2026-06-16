@@ -1,1 +1,248 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Breeds World</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Trebuchet MS", cursive, sans-serif;
+      background: linear-gradient(120deg, #ffd6e7, #d6f5ff);
+      color: #444;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #ff8fb1;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .login-section {
+      display: flex;
+      justify-content: center;
+      padding: 35px 20px 10px;
+    }
+
+    .box {
+      background: white;
+      padding: 35px;
+      border-radius: 30px;
+      width: min(100%, 360px);
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+    }
+
+    .box h2 {
+      margin: 0 0 20px;
+      color: #ff6fa5;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ffd6e7;
+      border-radius: 15px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: #ff6fa5;
+      box-shadow: 0 0 10px pink;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 20px;
+      background: #ff6fa5;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff8fb1;
+      transform: scale(1.03);
+    }
+
+    .signup-text {
+      font-size: 13px;
+      color: #777;
+      margin-top: 18px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .card h2 {
+      color: #ff8fb1;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.5;
+      padding-right: 25px;
+    }
+
+    .card::after {
+      content: "🐾";
+      position: absolute;
+      font-size: 30px;
+      bottom: 10px;
+      right: 15px;
+      opacity: 0.3;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      color: #ff6fa5;
+      animation: floatUp 6s linear forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-800px) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #ff8fb1;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cat Breeds World</h1>
+    <p>Meet some adorable and popular cat breeds!</p>
+  </header>
+
+  <section class="login-section" aria-label="Login form">
+    <div class="box">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" aria-label="Username" />
+      <input type="password" placeholder="Password" aria-label="Password" />
+      <button type="button">Login</button>
+      <p class="signup-text">New here? Sign up below</p>
+      <button type="button">Sign Up</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <article class="card">
+      <h2>Persian Cat</h2>
+      <img src="https://placecats.com/400/250" alt="Persian cat" />
+      <p>The Persian cat is known for its long, luxurious coat and sweet personality. They are calm, gentle, and love relaxing indoors.</p>
+    </article>
+
+    <article class="card">
+      <h2>Siamese Cat</h2>
+      <img src="https://placecats.com/401/250" alt="Siamese cat" />
+      <p>The Siamese cat is famous for its striking eyes, sleek coat, and talkative personality. They are social and affectionate companions.</p>
+    </article>
+
+    <article class="card">
+      <h2>Maine Coon</h2>
+      <img src="https://placecats.com/402/250" alt="Maine Coon cat" />
+      <p>The Maine Coon is one of the largest domesticated cat breeds. They are friendly, playful, and known for their fluffy tails.</p>
+    </article>
+
+    <article class="card">
+      <h2>Bengal Cat</h2>
+      <img src="https://placecats.com/403/250" alt="Bengal cat" />
+      <p>The Bengal cat is known for its beautiful spotted coat and energetic personality. They are intelligent, curious, and love to play.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cat Breeds World. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "❤️";
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
